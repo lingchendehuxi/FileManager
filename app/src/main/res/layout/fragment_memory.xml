@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <FrameLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <com.chamsion.filemanager.widget.WaveSideBarView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.chamsion.filemanager.widget.ProgressWheel
+            android:id="@+id/memory_Progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            app:matProg_barColor="?attr/colorPrimary"
+            app:matProg_barWidth="4dp"
+            app:matProg_circleRadius="80dp"
+            app:matProg_progressIndeterminate="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.chamsion.filemanager.widget.BoomView
+                android:id="@+id/cleanView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

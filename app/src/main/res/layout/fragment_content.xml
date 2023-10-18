@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/floating_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            fab:layout_behavior=".widget.FloatingActionMenuBehavior"
+            fab:menu_backgroundColor="#00ffffff"
+            fab:menu_colorNormal="?attr/colorPrimary"
+            fab:menu_colorPressed="?attr/colorAccent"
+            fab:menu_colorRipple="@color/white_transparent"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_singleLine="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_scoll_top"
+                style="@style/MenuColorStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_publish_white_24dp"
+                fab:fab_label="@string/scrollToTop"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_create_file"
+                style="@style/MenuColorStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_border_color_white_24dp"
+                fab:fab_label="@string/createFile"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_create_floder"
+                style="@style/MenuColorStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_border_color_white_24dp"
+                fab:fab_label="@string/createFolder"
+                fab:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
